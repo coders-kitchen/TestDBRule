@@ -5,6 +5,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.junit.Rule;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 
 /**
@@ -14,14 +15,14 @@ public class AppTest {
     @Rule
     public SetupTestDBRule setupTestDBRule = new SetupTestDBRule(this);
     
-    @PersistenceContext(unitName="TutorialPU")
+    @PersistenceContext(unitName="RuleTutorialPU")
     EntityManager first;
     
-    @PersistenceContext(unitName="TutorialPU")
+    @PersistenceContext(unitName="SecondRuleTutorialPU")
     EntityManager second;
     
     @Test
     public void out() {
-        System.out.println("STRING");
+        assertTrue(true);
     }
 }

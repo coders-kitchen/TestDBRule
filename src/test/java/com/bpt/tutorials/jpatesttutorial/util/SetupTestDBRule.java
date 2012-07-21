@@ -47,6 +47,7 @@ public class SetupTestDBRule implements TestRule{
             } 
             
             annotatedFields.add(field);
+            System.out.println("Field ["+ field.getName() +"] requests PU ["+unitName+"]");
                 
         }
         
